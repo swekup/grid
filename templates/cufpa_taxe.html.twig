@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello GridController!{% endblock %}
+
+{% block body %}
+    <div id="app" class="bg-white">
+        <grid :config="{{ config }}" :route-ajax="{{ routeAjax|json_encode }}"></grid>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+    {{ encore_entry_script_tags('grid') }}
+{% endblock %}
